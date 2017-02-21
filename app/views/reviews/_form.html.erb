@@ -1,10 +1,11 @@
-<%= simple_form_for(@review) do |f| %>
+<%= simple_form_for([@product, @review]) do |f| %>
   <%= f.error_notification %>
 
   <div class="form-inputs">
     <%= f.input :title %>
     <%= f.input :content %>
-    <%= f.association :product_id %>
+    <%= f.input :rating, collection: 0..5 %>
+    <%= f.association :product, :as => :hidden %>
 
   </div>
 
