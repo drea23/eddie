@@ -29,7 +29,9 @@ ActiveRecord::Schema.define(version: 20170221172559) do
     t.integer  "domain_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "user_id"
     t.index ["domain_id"], name: "index_artists_on_domain_id", using: :btree
+    t.index ["user_id"], name: "index_artists_on_user_id", using: :btree
   end
 
   create_table "attachinary_files", force: :cascade do |t|

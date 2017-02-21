@@ -4,15 +4,13 @@
   <div class="form-inputs">
     <%= f.input :name %>
     <%= f.input :format %>
-    <%= f.association :artist_id %>
     <%= f.input :product_price %>
     <%= f.input :delivery_price %>
     <%= f.input :stock_quantity %>
-    <%= f.input :rating_avg %>
     <%= f.input :description %>
     <%= f.input :photos, as: :attachinary %>
-    <%= f.association :material_id %>
-    <%= f.association :category_id %>
+    <%= f.association :material %>
+    <%= f.association :category %>
   </div>
 
   <div class="form-actions">
