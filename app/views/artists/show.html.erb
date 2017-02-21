@@ -1,6 +1,16 @@
-<h1>Artists#show</h1>
-<p>Find me in app/views/artists/show.html.erb</p>
+<h1><%= @artist.username %></h1>
+<p><%= @artist.description %></p>
+<p><%= @artist.website %></p>
+<p><%= @artist.domain.name %></p>
+<p><%= @artist.city %></p>
 
-<p>Name: <%= @artist.username %></p>
-<p>Address: <%= @artist.street , @artist.zipcode , @artist.city , @artist.country  %></p>
+<h2><%= @artist.username %>'s products</h2>
 
+<% @artist.products do |product| %>
+  <% link_to product_path(product) do %>
+    <div>
+      <%= product.name %>
+      <%= product.price %>
+    </div>
+  <% end %>
+<% end %>
