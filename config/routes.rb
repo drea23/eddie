@@ -1,9 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'reviews/new'
-
-  get 'reviews/create'
-
   root to: 'category#index'
   resources :products
   resources :categories, only: [:show]
