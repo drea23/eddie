@@ -2,7 +2,7 @@ class Artist < ApplicationRecord
   has_many :products
   belongs_to :domain
   validates :username, presence: true, uniqueness: true
-  validates :domain_id, presence: true
+  validates :domain, presence: true
   validates :street, presence: true
   validates :zipcode, presence: true
   validates :city, presence: true
