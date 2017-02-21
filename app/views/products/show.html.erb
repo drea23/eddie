@@ -50,5 +50,26 @@
   <%= @product.category_id %>
 </p>
 
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-4">
+      <% @product.photos.each do |photo| %>
+        <%= cl_image_tag photo.path, width: 300, height: 200, crop: :fill %>
+      <% end %>
+    </div>
+    <div class="col-xs-12 col-sm-4">
+      <% @product.photos.each do |photo| %>
+        <%= cl_image_tag photo.path, width: 300, height: 200, crop: :fill %>
+      <% end %>
+    </div>
+    <div class="col-xs-12 col-sm-4">
+      <% @product.photos.each do |photo| %>
+        <%= cl_image_tag photo.path, width: 300, height: 200, crop: :fill %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>

@@ -13,4 +13,5 @@ class Product < ApplicationRecord
   validates_uniqueness_of :name, :scope => :format
   monetize :product_price_cents
   monetize :delivery_price_cents
+  has_attachments :photos, maximum: 3
 end
