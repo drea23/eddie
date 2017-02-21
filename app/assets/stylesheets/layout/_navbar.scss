@@ -89,8 +89,9 @@
   line-height: 40px;
   font-weight: lighter;
   color: #666666;
-  border: 1px solid #E6E6E6;
-  border-radius: 5px;
+  border: none;
+  border-bottom: 1px solid #E6E6E6;
+  // border-radius: 5px;
   padding: 0 10px;
   font-size: 14px;
   outline: none;
@@ -128,4 +129,10 @@
   transform: rotate(45deg);
   border-left: 1px solid #E6E6E6;
   border-top: 1px solid #E6E6E6;
+}
+
+/* Navbar basket */
+.navbar-basket {
+  width: 35px;
+  height: 35px;
 }
