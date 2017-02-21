@@ -17,12 +17,12 @@
 
 <p>
   <strong>Product price:</strong>
-  <%= @product.product_price %>
+  <%= humanized_money_with_symbol(@product.product_price) %>
 </p>
 
 <p>
   <strong>Delivery price:</strong>
-  <%= @product.delivery_price %>
+  <%= humanized_money_with_symbol(@product.delivery_price) %>
 </p>
 
 <p>
