@@ -2,7 +2,7 @@
 <p>Find me in app/views/categories/show.html.erb</p>
 
 <%= @category.name %>
-<%= @category.products.each do |product|%>
+<% @category.products.each do |product|%>
   <%= product.name %>
   <%= product.description %>
   <%= product.stock_quantity %>
