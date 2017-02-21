@@ -11,4 +11,6 @@ class Product < ApplicationRecord
   validates :stock_quantity, presence: true
   validates_inclusion_of :stock_quantity, :in => 0..30
   validates_uniqueness_of :name, :scope => :format
+  monetize :product_price_cents
+  monetize :delivery_price_cents
 end
