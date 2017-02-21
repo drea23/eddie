@@ -1,0 +1,12 @@
+<h1>Categories#show</h1>
+<p>Find me in app/views/categories/show.html.erb</p>
+
+<%= @category.name %>
+<%= @category.products.each do |product|%>
+  <%= product.name %>
+  <%= product.description %>
+  <%= product.stock_quantity %>
+  <%= product.product_price %>
+  <%= product.material.name %>
+  <%= product.rating_avg %>
+<% end %>
