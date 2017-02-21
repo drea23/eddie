@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root to: 'category#index'
+  root to: 'categories#index'
   resources :products
   resources :categories, only: [:show]
   resources :reviews, only: [:new, :create]
