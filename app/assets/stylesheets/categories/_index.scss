@@ -1,0 +1,121 @@
+.img-hero {
+  // background-color: yellow;
+  height: 94vh;
+}
+
+h1 {
+  margin: 0px;
+  padding: 0px;
+  font-size: 5.063em;
+}
+
+h3 {
+  font-size: 2.25em;
+}
+
+.big-title {
+  padding: 30% 0px 0px 0px;
+  margin: 0px;
+}
+
+.form-hero {
+  margin-top: 5%;
+  padding-left: 0px;
+}
+
+.form-case {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #E6E6E6;
+  box-shadow: none;
+  margin-right: 1em;
+}
+
+.form-case:focus {
+  box-shadow: none;
+  border-radius: 0px;
+  border-bottom: 1px solid crimson;
+  }
+
+.btn-hero {
+  background-color: $brand-color;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 15px;
+}
+
+.btn-hero:hover {
+  background-color: $red;
+  color: white;
+  border: none;
+  border-radius: 3px;
+}
+
+// /* Smartphones (portrait) ----------- */
+// @media only screen and (max-width : 320px) {
+//     h1 {
+//       font-size: 2.25em;
+//     }
+
+//     h3 {
+//       font-size: 1.5em;
+//     }
+
+//     .btn-hero {
+//       margin-top: 2em;
+//     }
+// /* Styles */
+// }
+
+// /* iPads (portrait) ----------- */
+// @media only screen and (min-width : 768px) and (max-width : 1020px){
+// /* Styles */
+//     h1 {
+//       font-size: 3.375em;
+//     }
+
+//     h3 {
+//       font-size: 2.25em;
+//     }
+
+//     .btn-hero {
+//       margin-top: 2em;
+//     }
+
+//     .form-case {
+//       width: 100%;
+//     }
+// }
+
+
+// html {font-size: 1em;}
+
+// body {
+//   background-color: white;
+//   font-family: 'Libre Baskerville', serif;
+//   font-weight: 400;
+//   line-height: 1.45;
+//   color: #333;
+// }
+
+// p {margin-bottom: 1.3em;}
+
+// h1, h2, h3, h4 {
+//   margin: 1.414em 0 0.5em;
+//   font-weight: inherit;
+//   line-height: 1.2;
+// }
+
+// h1 {
+//   margin-top: 0;
+//   font-size: 5.063em;
+// }
+
+// h2 {font-size: 3.375em;}
+
+// h3 {font-size: 2.25em;}
+
+// h4 {font-size: 1.5em;}
+
+// small, .font_small {font-size: 0.667em;}
