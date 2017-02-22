@@ -1,32 +1,41 @@
 <div class="container">
-  <div class="row">
-    <div class="col-sm-4">
-      <div class="profile-card">
-        <%= image_tag "", {class: "img-circle", id: "logo"}%>
-        <p><%= @artist.username %></p>
-        <p><%= @artist.domain.name %></p>
-        <p><%= @artist.city %></p>
+  <div class="profile-card">
+    <div class="row">
+      <div class="col-sm-3">
+        <%= cl_image_tag @artist.photo.path, width: 100, height: 100, crop: :fill %>
+        <h2 class="text-center"><%= @artist.username %></h2>
+        <h3 class="text-center"><%= @artist.domain.name %></h3>
+        <h3 class="text-center"><%= @artist.city %></h3>
       </div>
-    </div>
-    <div class="col-sm-8">
-      <div class="profile-description">
-        <h2><%= @artist.username %></h2>
-        <p><%= @artist.description %></p>
+      <div class="col-sm-7">
+        <div class="profile-description">
+          <h2><%= @artist.username %></h2>
+          <p><%= @artist.description %></p>
+          <h3><%= @artist.website %></h3>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
 
-<p><%= @artist.website %></p>
-
-<h2><%= @artist.username %>'s products</h2>
-
-<% @artist.products do |product| %>
-  <% link_to product_path(product) do %>
-    <div>
-      <%= product.name %>
-      <%= product.price %>
+<div class="container">
+  <div class="artist-product">
+    <div class="row">
+      <h2><%= @artist.username %>'s products</h2>
+      <div class="col-xs-12 col-sm-4">
+        <% @artist.products do |product| %>
+          <% link_to product_path(product) do %>
+            <div>
+              <%= product.name %>
+              <%= product.price %>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
     </div>
-  <% end %>
-<% end %>
+  </div>
+</div>
+
+
+
