@@ -1,5 +1,5 @@
 class ArtistsController < ApplicationController
-  before_action :set_product, only: [:show, :edit, :update]
+  before_action :set_artist, only: [:show, :edit, :update]
 
   def new
     @artist = Artist.new
