@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   resources :categories, only: [:show]
 
 
-  resources :artists, only: [:new, :create, :show]
+  resources :artists, only: [:new, :create, :show, :edit, :update]
 
   mount Attachinary::Engine => "/attachinary"
 

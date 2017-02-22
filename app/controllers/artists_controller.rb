@@ -1,4 +1,6 @@
 class ArtistsController < ApplicationController
+  before_action :set_artist, only: [:show, :edit, :update]
+
   def new
     @artist = Artist.new
   end
@@ -14,10 +16,21 @@ class ArtistsController < ApplicationController
   end
 
   def show
-    @artist = Artist.find(params[:id])
+  end
+
+  def edit
+  end
+
+  def update
+    @artist.update(artist_params)
+    redirect_to artist_path(@artist)
   end
 
   private
+
+  def set_artist
+    @artist = Artist.find(params[:id])
+  end
 
   def artist_params
     params.require(:artist).permit(:username, :domain_id, :street, :zipcode, :city, :country, :siret, :description, :phone, :website, :photo)
