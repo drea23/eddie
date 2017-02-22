@@ -18,7 +18,7 @@
             <span class="card-basket"><a href=""><i class="fa fa-shopping-basket" aria-hidden="true"></i></a></span>
           </div>
 
-          <% if current_user.artist == product.artist %>
+          <% if current_user && current_user.artist == product.artist %>
             <%= link_to 'Edit', edit_product_path(product) %>
             <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
           <% end %>
