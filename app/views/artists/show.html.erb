@@ -1,8 +1,24 @@
-<h1><%= @artist.username %></h1>
-<p><%= @artist.description %></p>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="profile-card">
+        <%= image_tag "", {class: "img-circle", id: "logo"}%>
+        <p><%= @artist.username %></p>
+        <p><%= @artist.domain.name %></p>
+        <p><%= @artist.city %></p>
+      </div>
+    </div>
+    <div class="col-sm-8">
+      <div class="profile-description">
+        <h2><%= @artist.username %></h2>
+        <p><%= @artist.description %></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 <p><%= @artist.website %></p>
-<p><%= @artist.domain.name %></p>
-<p><%= @artist.city %></p>
 
 <h2><%= @artist.username %>'s products</h2>
 
