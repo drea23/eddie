@@ -1,16 +1,15 @@
 .img-hero {
-  // background-color: yellow;
   height: 94vh;
 }
 
 h1 {
   margin: 0px;
   padding: 0px;
-  font-size: 5.063em;
+  // font-size: 5.063em;
 }
 
 h3 {
-  font-size: 2.25em;
+  // font-size: 2.25em;
 }
 
 .big-title {
@@ -34,7 +33,7 @@ h3 {
 .form-case:focus {
   box-shadow: none;
   border-radius: 0px;
-  border-bottom: 1px solid crimson;
+  border-bottom: 1px solid $brand-color;
   }
 
 .btn-hero {
@@ -52,42 +51,13 @@ h3 {
   border-radius: 3px;
 }
 
-// /* Smartphones (portrait) ----------- */
-// @media only screen and (max-width : 320px) {
-//     h1 {
-//       font-size: 2.25em;
-//     }
+    // .btn-hero {
+    //   margin-top: 2em;
+    // }
 
-//     h3 {
-//       font-size: 1.5em;
-//     }
-
-//     .btn-hero {
-//       margin-top: 2em;
-//     }
-// /* Styles */
-// }
-
-// /* iPads (portrait) ----------- */
-// @media only screen and (min-width : 768px) and (max-width : 1020px){
-// /* Styles */
-//     h1 {
-//       font-size: 3.375em;
-//     }
-
-//     h3 {
-//       font-size: 2.25em;
-//     }
-
-//     .btn-hero {
-//       margin-top: 2em;
-//     }
-
-//     .form-case {
-//       width: 100%;
-//     }
-// }
-
+    // .form-case {
+    //   width: 100%;
+    // }
 
 // html {font-size: 1em;}
 
