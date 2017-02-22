@@ -28,5 +28,9 @@
   </div>
 </div>
 
+<% if current_user.artist == @artist %>
 
+<%= link_to 'Edit my profile', artist_path %>
+
+<% end %>
 
