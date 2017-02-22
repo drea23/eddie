@@ -1,5 +1,6 @@
 class Artist < ApplicationRecord
   has_many :products, dependent: :destroy
+  has_attachment :photo
   belongs_to :user
   belongs_to :domain
   validates :username, presence: true, uniqueness: true
