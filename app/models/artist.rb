@@ -1,5 +1,4 @@
 class Artist < ApplicationRecord
-  domain_regex = /((http|https):\/\/)[a-z0-9]*(\.?[a-z0-9]+)\.[a-z]{2,5}(:[0-9]{1,5})?(\/.)?\z/ix
   has_many :products, dependent: :destroy
   belongs_to :user
   belongs_to :domain
@@ -9,7 +8,9 @@ class Artist < ApplicationRecord
   validates :zipcode, presence: true
   validates :city, presence: true
   validates :country, presence: true
-  validates :siret, presence: true, uniqueness: true
+  validates :siret, presence: true, uniqueness: true, :numericality => true
+  validates_length_of :siret, :is => 14
+  validates_length_of :description, :maximum => 500
   validates :email, presence: true, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i, on: :create }
-  validates :website, format: {:with => domain_regex}
+  validates :website, url: true, :allow_blank => true
 end
