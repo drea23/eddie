@@ -12,6 +12,5 @@ class Artist < ApplicationRecord
   validates :siret, presence: true, uniqueness: true, :numericality => true
   validates_length_of :siret, :is => 14
   validates_length_of :description, :maximum => 500
-  validates :email, presence: true, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i, on: :create }
   validates :website, url: true, :allow_blank => true
 end
