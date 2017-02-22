@@ -9,7 +9,7 @@
 
     <!-- Search form -->
     <form action="" class="navbar-wagon-search">
-      <input type="text" class="navbar-wagon-search-input" placeholder="Search something">
+      <input type="text" class="navbar-wagon-search-input">
       <button type="submit" class="navbar-wagon-search-btn">
         <i class="fa fa-search"></i>
       </button>
@@ -17,6 +17,9 @@
 
     <!-- Different navigation if login or not -->
     <% if user_signed_in? %>
+
+      <!-- Basket link -->
+    <%= image_tag "basket.png", class: "navbar-basket"%>
 
       <!-- Profile picture and dropdown -->
       <div class="navbar-wagon-item">
@@ -49,7 +52,6 @@
 
     <% end %>
 
-    <%= image_tag "basket.png", class: "navbar-basket"%>
 
   </div>
 
