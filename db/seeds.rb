@@ -5,4 +5,17 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Artist.create(username: "Sérigraphe", description: "blabla", street: "11 rue de la berthe", zipcode: "13013", city:"Marseille", country: "france", siret:"876889899", email: "jacky@mrs.fr", domain_id: 1)
+
+Artist.destroy_all
+Domain.destroy_all
+Category.destroy_all
+Material.destroy_all
+
+domain = Domain.create!(name: "Photographe")
+
+Artist.create!(username: "Sérigraphe", description: "blabla", street: "11 rue de la berthe", zipcode: "13013", city:"Marseille", country: "france", siret:"876889899", email: "jacky@mrs.fr", domain: domain)
+
+
+Category.create!(name: "Sérigraphie")
+
+Material.create!(name: "papier")
