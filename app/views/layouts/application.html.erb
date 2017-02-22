@@ -12,15 +12,9 @@
   <body">
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12 col-lg-10 col-lg-offset-1"><%= yield %></div>
-      </div>
-    </div>container">
-      <div class="row">
-        <div class="col-xs-12  col-md-12 "><%= yield %></div>
-      </div>
-    </div>
+
+    <%= yield %>
+
     <%= javascript_include_tag 'application' %>
     <%= cloudinary_js_config %>
   </body>
