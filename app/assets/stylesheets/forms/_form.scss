@@ -1,0 +1,68 @@
+.form_container {
+  background: white;
+  padding: 80px 80px;
+  margin: 80px 100px;
+}
+
+.form_card {
+  // border: 1px solid grey;
+  padding: 20px;
+  background: white;
+}
+
+.text-uppercase {
+  margin-top: 0px;
+}
+
+.form_photo_card {
+  // border: 1px solid grey;
+  position:relative;
+  background: white;
+  padding: auto;
+  text-align: center;
+  text-decoration: none;
+}
+
+.attachinary_container ul {
+  list-style-type: none;
+}
+
+.attachinary_container img {
+ width: 250px;
+ height: 250px;
+ border-radius: 50%;
+}
+
+.attachinary_container a {
+  text-align: center;
+  display: none;
+}
+
+.form_card input, .form_card textarea, .form_card select {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 300px;
+    flex: 0 1 300px;
+    -webkit-transition: all 0.15s ease;
+    transition: all 0.15s ease;
+    line-height: 40px;
+    font-weight: lighter;
+    color: #666666;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #E6E6E6;
+    padding: 0 10px;
+    font-size: 14px;
+    outline: none;
+    margin-right: 30px;
+}
+
+.form_card label {
+  font-size: 14px;
+}
+
+.artist_photo label {
+  display: none;
+}
+
+
