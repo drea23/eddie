@@ -5,7 +5,9 @@
         <div class="product-card">
           <div class="footer-picture">
             <% if product.photos? %>
-              <%= cl_image_tag product.photos.first.path, width: 300, height: 300, crop: :fill %>
+              <%= link_to product_path(product) do %>
+                <%= cl_image_tag product.photos.first.path, width: 300, height: 300, crop: :fill %>
+                <% end %>
             <% end %>
           </div>
 
@@ -15,7 +17,8 @@
             <% end %>
 
             <span class="price"><%= humanized_money_with_symbol(product.product_price) %></span>
-            <span class="card-basket"><a href=""><i class="fa fa-shopping-basket" aria-hidden="true"></i></a></span>
+
+            <a href="#addToCart" data-toggle="modal"><span class="card-basket"><i class="fa fa-shopping-basket" aria-hidden="true"></i></span></a>
           </div>
 
           <% if current_user && current_user.artist == product.artist %>
@@ -27,3 +30,5 @@
     <% end %>
   </div>
 </div>
+
+<%= render '/shared/add_to_cart_modal' %>
