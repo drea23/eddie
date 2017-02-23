@@ -1,5 +1,16 @@
 .product-card {
   width: 100%;
+  border: solid;
+  border-width: 1px;
+  border-color: #ddd;
+  transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px transparent;
+    transition-duration: 0.3s;
+    transition-property: transform;
+}
+
+.product-card:hover {
+transform: scale(1.02);
 }
 
 .product-card a {
@@ -57,4 +68,14 @@
   right: 8px;
 }
 
+@media only screen and (max-width : 768px) {
+  .product-card {margin-bottom: 2em;}
+/* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-width : 768px) and (max-width : 1020px){
+/* Styles */
+ .product-card {margin-bottom: 2em;}
+}
 

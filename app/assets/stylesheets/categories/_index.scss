@@ -3,7 +3,7 @@
 }
 
 .hero {
-  height: 94vh;
+  height: 100vh;
   h3 {
     margin-bottom: 1.5em;
   }
@@ -15,12 +15,11 @@ h1 {
 }
 
 h4 {
-  text-align: center;
   color: #888;
 }
 
 .big-title {
-  padding-top: 25vh;
+  padding-top: 35vh;
   margin: 0px;
 }
 
@@ -37,6 +36,7 @@ h4 {
   margin-right: 2em;
   background: none;
   color: white;
+  border-radius: initial;
 }
 
 .form-case:focus {
@@ -51,22 +51,33 @@ h4 {
   color: white;
   border: none;
   border-radius: 3px;
-  padding: 15px 30px 15px 30px;
   position: relative;
+  padding: 15px 30px;
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  overflow: hidden;
+  transition-duration: 0.5s;
+  transition-property: color, background-color
 }
 
 .btn-hero:hover {
-  background-color: $red;
   color: white;
   border: none;
   border-radius: 3px;
+  animation-name: hvr-back-pulse;
+  animation-name: hvr-back-pulse;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  background-color: $red;
 }
 
 .categories {
-  background-color: lightgray;
+  background-color: #eee;
   height: auto;
-  padding-top: 1em;
-  padding-bottom: 1em;
+  padding-top: 5em;
+  padding-bottom: 5em;
   h3 {
     margin-bottom:1em;
   }
@@ -78,20 +89,42 @@ h4 {
 
 .category-card {
   background-color: white;
-  height: 300px;
+  height: 250px;
   border-radius: 3px;
   border: solid;
   border-width: 1px;
   border-color: #ccc;
-  box-shadow: 5px 5px 30px -9px rgba(0,0,0,0.5);
   margin-bottom: 2em;
   display: flex;
   align-items: center;
-  text-align: center;
+    box-shadow: 0 0 1px transparent;
+    transition-duration: 0.3s;
+    transition-property: transform;
+
+  .img-card {
+    // background-image: image-url("photo.png");
+    background-size: cover;
+    padding: 1em;
+    width: 85%;
+    height: 85%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    h4 {color: white;}
+  }
 }
+  .photo-card {background-image: image-url("photo.png")}
+  .peinture-card {background-image: image-url("peinture.png")}
+  .affiche-card {background-image: image-url("affiche.png")}
+  .art-decoratif-card {background-image: image-url("art-decoratif.png")}
+  .mobilier-card {background-image: image-url("mobilier.png")}
+  .serigraphie-card {background-image: image-url("serigraphie.png")}
+  .ceramique-card {background-image: image-url("ceramique.png")}
+  .livre-card {background-image: image-url("livre.png")}
 
 .category-card:hover {
-  box-shadow: 5px 5px 20px -9px rgba(0,0,0,0.5);
+  transform: scale(1.02);
 }
 
 .card {
@@ -108,17 +141,32 @@ video {
   height: auto;
   z-index: -100;
   transform: translateX(-50%) translateY(-50%);
-  background: url(images/eddie-video-capture.png) no-repeat;
+  background: url("images/eddie-video-capture.png") no-repeat;
   background-size: cover;
   transition: 1s opacity;
 }
+
+.month-selection {
+  background-color: white;
+  height: auto;
+  padding-top: 5em;
+  padding-bottom: 5em;
+  h3 {
+    margin-bottom:1em;
+  }
+  h4 {
+    width: 100%;
+    text-align: center;
+  }
+}
+
 .stopfade {
    opacity: .5;
 }
 
 @media only screen and (max-width : 768px) {
   .hero {margin: 0px 1em 0px 1em;}
-  #bgvid {background-image:url(images/eddie-video-capture.png);}
+  #bgvid {background-image:url("images/eddie-video-capture.png");}
 
 /* Styles */
 }
