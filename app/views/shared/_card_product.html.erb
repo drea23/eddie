@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row">
+    <% @products.each do |product| %>
+      <div class="col-xs-6 col-md-3 ">
+        <div class="product-card">
+          <div class="footer-picture">
+            <% if product.photos? %>
+              <%= cl_image_tag product.photos.first.path, width: 300, height: 300, crop: :fill %>
+            <% end %>
+          </div>
+
+          <div class="footer-card">
+            <%= link_to product_path(product) do %>
+              <h2><%= product.name %> <span class="format"><%= product.format %></span></h2>
+            <% end %>
+
+            <span class="price"><%= humanized_money_with_symbol(product.product_price) %></span>
+            <span class="card-basket"><a href=""><i class="fa fa-shopping-basket" aria-hidden="true"></i></a></span>
+          </div>
+
+          <% if current_user && current_user.artist == product.artist %>
+            <%= link_to 'Edit', edit_product_path(product) %>
+            <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
