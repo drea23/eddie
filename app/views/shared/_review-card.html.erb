@@ -1,0 +1,12 @@
+<div class="review-card">
+    <% @product.reviews.each do |review| %>
+        <div class="review-content">
+          <i class="fa fa-star" aria-hidden="true">
+            <%= review.rating %>
+          </i>
+          <h4><%= review.title %></h4>
+          <p><%= review.content %></p>
+        </div>
+    <% end %>
+    <%= link_to '. . .', new_product_review_path(@product), class: 'btn btn-default btn-review center-block' %>
+</div>
