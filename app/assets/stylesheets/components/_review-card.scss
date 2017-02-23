@@ -1,0 +1,47 @@
+.review {
+  padding: 0 3em 3em 3em;
+}
+
+.review-card {
+  // -moz-box-shadow: 2px 2px 2px 0px #DCDCDC;
+  // -webkit-box-shadow: 2px 2px 2px 0px #DCDCDC;
+  // -o-box-shadow: 2px 2px 2px 0px #DCDCDC;
+  // box-shadow: 2px 2px 2px 0px #DCDCDC;
+  box-shadow: 1px 3px 3px 1px rgba(0, 0, 0, 0.2);
+  filter:progid:DXImageTransform.Microsoft.Shadow(color=#DCDCDC, Direction=134, Strength=2);
+  height: auto;
+  width: auto;
+  padding: 0px 25px;
+}
+
+.review-content {
+  -moz-box-shadow: 0px 2px 0px 0px #DCDCDC;
+  -webkit-box-shadow: 0px 2px 0px 0px #DCDCDC;
+  -o-box-shadow: 0px 2px 0px 0px #DCDCDC;
+  box-shadow: 0px 2px 0px 0px #DCDCDC;
+  filter:progid:DXImageTransform.Microsoft.Shadow(color=#DCDCDC, Direction=180, Strength=0);
+  position: relative;
+  padding-top: 15px;
+}
+
+.review-content > p {
+  padding-bottom: 20px;
+  margin:0px;
+}
+
+.btn-review {
+  background-color: white;
+  color: $gray;
+  border: none;
+  border-radius: 3px;
+  margin: 1px;
+}
+
+.btn-review:hover {
+  background-color: $gray;
+  color: white;
+  border: none;
+  border-radius: 3px;
+}
+
+
