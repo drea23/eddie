@@ -5,7 +5,7 @@ class ProductsController < ApplicationController
   # GET /products.json
   def index
     if !params[:q].blank?
-      @products = Product.where(name: params[:q])
+      @products = Product.where("lower(name) like ?", "%#{params[:q].downcase}%" )
     else
       @products = Product.all
     end
