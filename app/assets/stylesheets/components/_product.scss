@@ -13,3 +13,7 @@
 .product-description {
   padding-left: 3em;
 }
+
+.product-description > h4 > a {
+  text-decoration: none;
+}
