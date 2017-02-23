@@ -136,3 +136,17 @@
   width: 35px;
   height: 35px;
 }
+
+.btn-medium {
+  color: #999999;
+  border: 1px solid #999999;
+  padding: 5px 14px 9px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.6;
+}
+.btn-medium:hover {
+  opacity: 1;
+  text-decoration: none;
+  color: #999999;
+}
