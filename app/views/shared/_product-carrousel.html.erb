@@ -1,0 +1,77 @@
+<!-- Slider -->
+<div class="product-carrousel">
+ <!--  <div class="row"> -->
+      <div id="myCarousel" class="carousel slide">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <% @product.photos.each_with_index do |photo, index| %>
+            <li data-target="#mycarousel" data-slide-to=#{index) class="#{'active' if index == 0}"></li>
+          <% end %>
+        </ol>
+        <!-- Carousel items -->
+        <div class="carousel-inner" role="listbox">
+          <% @product.photos.each_with_index do |photo, index| %>
+            <div class="item <%= index == 0 ? 'active' : '' %>">
+             <%= cl_image_tag photo.path, width: 500, height: 500, crop: :fill %>
+            </div>
+          <% end %>
+        </div>
+        <!-- Carousel nav -->
+        <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="carousel-control right" href="#myCarousel" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+      <!-- </div> -->
+  </div>
+
+  <!--Photos-->
+
+  <div class="hidden-phone" id="slider-thumbs">
+    <!-- Bottom switcher of slider -->
+    <ul class="thumbnails list-inline" style="margin-right: -5px;">
+      <% @product.photos.each do |photo| %>
+        <li class="list-unstyled">
+            <%= cl_image_tag photo.path, width: 125, height: 125, crop: :fill %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

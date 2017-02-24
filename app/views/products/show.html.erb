@@ -1,89 +1,43 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="product">
+    <div class="row">
+      <div class="col-sm-5 col-sm-offset-1">
+        <%= render 'shared/product-carrousel' %>
+      </div>
+      <div class="col-sm-5">
+        <div class="product-description">
+          <h3 class="text-uppercase"><%= @product.name %></h3>
+          <h4 class="text-uppercase"><%= link_to @product.artist.username, artist_path(@product.artist)%></h4>
+          <p class="text-justify"><%= @product.description %></p>
+          <h4 class="text-uppercase"> Size : <%= @product.format %></h4>
+          <h4 class="text-uppercase"> Materials : <%= @product.material.name %></h4>
+          <h4 class="text-uppercase"> Price : <%= humanized_money_with_symbol(@product.product_price) %></h4>
+          <h4 class="text-uppercase"> Delivery price : <%= humanized_money_with_symbol(@product.delivery_price) %></h4>
 
-<p>
-  <strong>Name:</strong>
-  <%= @product.name %>
-</p>
-
-<p>
-  <strong>Format:</strong>
-  <%= @product.format %>
-</p>
-
-<p>
-  <strong>Artist:</strong>
-  <%= @product.artist_id %>
-</p>
-
-<p>
-  <strong>Product price:</strong>
-  <%= humanized_money_with_symbol(@product.product_price) %>
-</p>
-
-<p>
-  <strong>Delivery price:</strong>
-  <%= humanized_money_with_symbol(@product.delivery_price) %>
-</p>
-
-<p>
-  <strong>Stock quantity:</strong>
-  <%= @product.stock_quantity %>
-</p>
-
-<p>
-  <strong>Rating avg:</strong>
-  <%= @product.rating_avg %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
-
-<p>
-  <strong>Material:</strong>
-  <%= @product.material_id %>
-</p>
-
-<p>
-  <strong>Category:</strong>
-  <%= @product.category_id %>
-</p>
-
-
-<div>
-  <h2>Reviews</h2>
-    <ul>
-        <% @product.reviews.each do |review| %>
-        <li>
-          <h3><%= review.title %></h3>
-          <span><%= review.rating %>/5</span>
-          <p><%= review.content %></p>
-        </li>
-        <% end %>
-    </ul>
-    <%= link_to 'Add a review', new_product_review_path(@product) %>
+          <button type="submit" data-toggle="modal" data-target="#addToCart" class="btn btn-default btn-hero">Add to cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-sm-4">
-      <% @product.photos.each do |photo| %>
-        <%= cl_image_tag photo.path, width: 300, height: 200, crop: :fill %>
-      <% end %>
-    </div>
-    <div class="col-xs-12 col-sm-4">
-      <% @product.photos.each do |photo| %>
-        <%= cl_image_tag photo.path, width: 300, height: 200, crop: :fill %>
-      <% end %>
-    </div>
-    <div class="col-xs-12 col-sm-4">
-      <% @product.photos.each do |photo| %>
-        <%= cl_image_tag photo.path, width: 300, height: 200, crop: :fill %>
-      <% end %>
+  <div class="review">
+    <div class="row">
+      <div class="col-xs-10 col-md-offset-1">
+        <% if @product.reviews != nil %>
+          <%= render 'shared/review-card' %>
+        <% end %>
+      </div>
     </div>
   </div>
+</div>
 
 
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+<div class="text-center">
+  <% if current_user && current_user.artist == @product.artist %>
+    <%= link_to 'Edit my product', edit_product_path, class: "btn btn-default" %>
+  <% end %>
+</div>
+
+<%= render '/shared/add_to_cart_modal' %>

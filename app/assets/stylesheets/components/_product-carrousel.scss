@@ -1,0 +1,24 @@
+.product-carrousel {
+  width:auto;
+  height:auto;
+}
+
+.thumbnails {
+  padding-top: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.carousel-control {
+  vertical-align: center;
+}
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+      width: 100%;
+      margin: auto;
+  }
+
+.flex-box {
+  display: flex;
+}
