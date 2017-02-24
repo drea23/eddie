@@ -37,6 +37,7 @@ h4 {
   background: none;
   color: white;
   border-radius: initial;
+  padding-left: 0px;
 }
 
 .form-case:focus {
@@ -79,7 +80,8 @@ h4 {
   padding-top: 5em;
   padding-bottom: 5em;
   h3 {
-    margin-bottom:1em;
+    margin-bottom: 1em;
+    font-weight: bolder;
   }
   h4 {
     width: 100%;
@@ -152,7 +154,8 @@ video {
   padding-top: 5em;
   padding-bottom: 5em;
   h3 {
-    margin-bottom:1em;
+    margin-bottom: 1em;
+    font-weight: bolder;
   }
   h4 {
     width: 100%;

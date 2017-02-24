@@ -6,8 +6,14 @@
           <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
           <source src="<%= image_path("eddie-video.mp4") %>" type="video/mp4">
         </video>
-        <h1 style="color: white;"> Find real quality art pieces made by professionals.</h1>
-        <h3 style="color: white;"> Discover unique work, created by originial artists all around the world.</h3>
+        <div class="row">
+          <div class="col-sm-12">
+            <h1 style="color: white;"> <strong>Find real quality art pieces made by professionals.</strong></h1>
+          </div>
+          <div class="col-sm-6">
+            <h3 style="color: white; line-height: 1.2em;"> Discover unique work, created by originial artists all around the world.</h3>
+          </div>
+        </div>
       </div>
       <div class="form-hero">
         <div class="form-group col-xs-12 col-sm-6 col-md-4 col-lg-4">
@@ -22,18 +28,16 @@
     </div>
   </div>
 </div>
-
-
 <div class="categories">
-<div class="container">
-<!-- <div class="text-center">
-  <% @categories.each do |category| %>
-  <%= category.name %>
-  <% end %>
-</div> -->
+  <div class="container">
+    <div class="row"><!-- <div class="text-center">
+      <% @categories.each do |category| %>
+      <%= category.name %>
+      <% end %>
+    </div> -->
     <div >
-      <h3>CATEGORIES</h3>
       <div class="category-cards">
+        <div class="col-xs-12"><h3>CATEGORIES</h3></div>
         <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
           <div class="category-card">
             <div class="img-card photo-card">
@@ -43,7 +47,7 @@
         </div>
         <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
           <div class="category-card">
-          <div class="img-card peinture-card">
+            <div class="img-card peinture-card">
               <h4><strong>PEINTURE</strong></h4>
             </div>
           </div>
@@ -92,12 +96,11 @@
         </div>
       </div>
     </div>
+  </div></div>
 </div>
-</div>
-
 <div class="month-selection">
-<div class="container">
-  <h3>LAST PRODUCTS</h3>
+  <div class="container">
+    <h3>LAST PRODUCTS</h3>
   </div>
   <%= render "/shared/card_product" %>
 </div>
