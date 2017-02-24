@@ -7,13 +7,23 @@
 }
 
 .product h3, h4 {
-  margin: 20px 0;
+  margin: 20px 0px 10px 0;
 }
 
 .product-description {
   padding-left: 3em;
 }
 
-.product-description > h4 > a {
+.product-description li {
+  margin-top: 10px;
+}
+
+.product-description > p > a {
   text-decoration: none;
+  color: $gray;
+  font-size: 15px;
+}
+
+.product-description li:last-child {
+  margin-bottom: 25px;
 }

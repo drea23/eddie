@@ -1,15 +1,19 @@
 <div class="review-card">
+  <% if @product.reviews.count > 0 %>
     <% @product.reviews.each do |review| %>
-        <div class="review-content">
+          <div class="review-content">
             <% review.rating.times do %>
               <i class="fa fa-star" aria-hidden="true"></i>
             <% end %>
             <% (5 - review.rating).times do %>
               <i class="fa fa-star" aria-hidden="true" style="color: rgba(0,0,0,0.2)"></i>
             <% end %>
-          <h4><%= review.title %></h4>
-          <p><%= review.content %></p>
-        </div>
+            <h4><%= review.title %></h4>
+            <p><%= review.content %></p>
+          </div>
     <% end %>
     <%= link_to '. . .', new_product_review_path(@product), class: 'btn btn-review center-block' %>
+  <% else %>
+    <%= link_to 'Soyez le premier à donner votre avis', new_product_review_path(@product), class: 'btn btn-review center-block' %>
+  <% end %>
 </div>
