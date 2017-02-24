@@ -7,6 +7,7 @@
     box-shadow: 0 0 1px transparent;
     transition-duration: 0.3s;
     transition-property: transform;
+  margin-bottom: 20px;
 }
 
 .product-card:hover {
@@ -16,6 +17,10 @@ transform: scale(1.02);
 .product-card a {
   text-decoration: none;
   color: #333;
+}
+
+.product-card a:hover .fa {
+ color : crimson;
 }
 
 .product-card a:hover {
@@ -66,6 +71,31 @@ transform: scale(1.02);
   position: absolute;
   bottom: 8px;
   right: 8px;
+}
+
+.fa-pencil-square-o {
+  position: absolute;
+  top: 7px;
+  right: 23px;
+}
+
+.fa-trash-o {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+}
+
+.modal-body {
+  display: block;
+  height: auto;
+}
+
+.cart_image {
+float: left;
+}
+
+.cart_content {
+float: right
 }
 
 @media only screen and (max-width : 768px) {
