@@ -149,7 +149,7 @@ video {
   height: auto;
   z-index: -100;
   transform: translateX(-50%) translateY(-50%);
-  background: url("images/eddie-video-capture.png") no-repeat;
+  // background: url("images/eddie-video-capture.png") no-repeat;
   background-size: cover;
   transition: 1s opacity;
 }
@@ -175,7 +175,7 @@ video {
 
 @media only screen and (max-width : 768px) {
   .hero {margin: 0px 1em 0px 1em;}
-  #bgvid {background-image:url("images/eddie-video-capture.png");}
+  // #bgvid {background-image:url("images/eddie-video-capture.png");}
 
 /* Styles */
 }
