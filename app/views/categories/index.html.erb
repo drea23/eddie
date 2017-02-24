@@ -6,28 +6,32 @@
           <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
           <source src="<%= image_path("eddie-video.mp4") %>" type="video/mp4">
         </video>
+
         <div class="row">
-          <div class="col-sm-12">
-            <h1 style="color: white;"><strong>Find real quality art pieces made by professionals.</strong></h1>
-          </div>
-          <div class="col-sm-6">
-            <h3 style="color: white; line-height: 1.2em;"> Discover unique work, created by originial artists all around the world.</h3>
+          <div class="poster">
+            <div class="col-sm-12">
+              <h1 style="color: white;"><strong>Find real quality art pieces made by professionals.</strong></h1>
+            </div>
+            <div class="col-sm-6">
+              <h3 style="color: white; line-height: 1.2em;"> Discover unique work, created by originial artists all around the world.</h3>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="form-hero">
-        <div class="form-group col-xs-12 col-sm-6 col-md-4 col-lg-4">
-          <form class="form-inline" action="<%= products_path %>">
-            <input type="text" name="q" class="form-control form-case" placeholder="fucking cool poster">
-          </div>
-          <div class="col-xs-12 col-sm-6 col-md-2 col-lg-2">
-            <button type="submit" class="btn btn-default btn-hero">LET'S FIND IT!</button>
-          </div>
-        </form>
+        <div class="row form-hero">
+          <div class="form-group col-xs-12 col-sm-6 col-md-4 col-lg-4">
+            <form class="form-inline" action="<%= products_path %>">
+              <input type="text" name="q" class="form-control form-case" placeholder="fucking cool poster">
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-2 col-lg-2">
+              <button type="submit" class="btn btn-default btn-hero">LET'S FIND IT!</button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   </div>
 </div>
+
 <div class="categories">
   <div class="container">
     <div class="row"><!-- <div class="text-center">
