@@ -1,19 +1,26 @@
 <%= simple_form_for(@product) do |f| %>
   <%= f.error_notification %>
-
   <div class="form-inputs">
-    <%= f.input :name %>
-    <%= f.input :format %>
-    <%= f.input :product_price %>
-    <%= f.input :delivery_price %>
-    <%= f.input :stock_quantity %>
-    <%= f.input :description %>
-    <%= f.input :photos, as: :attachinary %>
-    <%= f.association :material %>
-    <%= f.association :category %>
-  </div>
-
-  <div class="form-actions">
-    <%= f.button :submit %>
+    <div class="flex-container container">
+      <div class="row">
+        <div class="col-xs-12 col-md-6 col-md-offset-3">
+        <h3>NEW PRODUCT:</h3>
+          <div class= "flex-card card" >
+            <div class="form-actions">
+              <%= f.input :name %>
+              <%= f.input :format %>
+              <%= f.input :product_price %>
+              <%= f.input :delivery_price %>
+              <%= f.input :stock_quantity %>
+              <%= f.input :description %>
+              <%= f.input :photos, as: :attachinary %>
+              <%= f.association :material %>
+              <%= f.association :category %>
+              <%= f.button :submit, :class => "btn-hero" %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 <% end %>

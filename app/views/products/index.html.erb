@@ -3,9 +3,9 @@
     <p id="notice"><%= notice %></p>
 
     <% if !params[:q].blank? %>
-      <h1><%= params[:q] %> products</h1>
+      <h3><%= params[:q].upcase %> PRODUCTS</h3>
     <% else %>
-      <h1>Our products</h1>
+      <h3>OUR PRODUCTS</h3>
     <% end %>
   </div>
   <div class="row">
