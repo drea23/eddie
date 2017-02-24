@@ -1,0 +1,31 @@
+.sign-up {
+  position: fixed;
+  top: 10em;
+}
+
+.form-control {
+  border: none;
+  border-bottom: 1px solid #E6E6E6;
+  box-shadow: none;
+  margin-right: 2em;
+  background: none;
+  border-radius: initial;
+  padding-left: 0px;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border-radius: 0px;
+  border-bottom: 1px solid $brand-color;
+  }
+
+.form-actions .btn-hero {
+  margin-bottom: 1em;
+}
+
+a {color: lightgray;}
+
+a:hover {
+  color:$brand-color;
+  text-decoration: none;
+}
