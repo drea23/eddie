@@ -22,10 +22,11 @@ domain3 = Domain.create!(name:"Designer")
 domain4 = Domain.create!(name: "Serigraphe")
 
 lila = Artist.create!(username: "Lila", description: "Excentrique et éxhubérante, j'aime l'art contemporain dans sa forme la plus brute", street: "11 rue de la berthe", zipcode: "13013", city:"Marseille", country: "france", siret:"12345678901234", domain: domain3, user_id: user1.id )
-lila.photo_url = ''
+lila.photo_url = 'https://www.izroom.com/assets/images/users/cover/K4dyVosxhbdV2wLJM7Zf3CTIEZ6FKk.jpg'
 alexis = Artist.create!(username: "Alexis", description: "Je collectionne les brosses à cheveux en corne de cerf", street: "23 rue de la nouille", zipcode: "75006", city:"Paris", country: "france", siret:"12345678901243", domain: domain4, user_id: user3.id)
+alexis.photo_url = 'https://pbs.twimg.com/profile_images/1607851651/332316_10150437571694148_646249147_10839639_1134947364_o_400x400.jpg'
 andrea = Artist.create!(username: "Andrea", description: "blabla", street: "56 rue de la fortune", zipcode: "13013", city:"Marseille", country: "france", siret:"12345678901245", domain: domain2, user_id: user2.id)
-andrea.photo_url = ''
+andrea.photo_url = 'https://pbs.twimg.com/profile_images/667061001213333504/Vwy084I6.jpg'
 
 serigraphie = Category.create!(name: "Serigraphie")
 photo = Category.create!(name: "Photographie")
@@ -46,13 +47,11 @@ urls = ["https://galerie.alittlemarket.com/galerie/product/853733/dessins-papi-y
 url1 = [
   'https://galerie.alittlemarket.com/galerie/product/853733/dessins-papi-yvette-illustration-serigra-8174933-papi-mami-4-ill400a-f247b_570x0.jpg',
 ]
-product1 = Product.new(name: 'Affiche chouette', format: '60 x 80', product_price: 30, delivery_price: 5, description:"Sérigraphie chouette et l'enfant sur papier 180gr", stock_quantity: 10, material: papier, category: serigraphie, artist: alexis)
+product1 = Product.new(name: 'Papi', format: '60 x 80', product_price: 30, delivery_price: 5, description:"Sérigraphie chouette et l'enfant sur papier 180gr", stock_quantity: 10, material: papier, category: serigraphie, artist: alexis)
 product1.save!
-product1.reviews = Review.new(title:"Superbe", content: "Article d'une très grande qualité artistique", rating: 4)
-product1.reviews = Review.new(title:"Magnifique", content: "Alexis est très doué, ses sérigraphies sont magnifiques", rating: 4)
 product1.photo_urls = url1
 url2 = [
-  'https://galerie.alittlemarket.com/galerie/product/853733/dessins-papi-yvette-illustration-serigra-8174933-papi-mami-4-ill400a-f247b_570x0.jpg',
+  'https://galerie.alittlemarket.com/galerie/product/853733/dessins-papi-yvette-illustration-serigra-8174933-papi-mami-4-ill400a-f247b_570x0.jpg', 'http://www.boutique-vintage.com/yvette-1.png', 'http://www.boutique-vintage.com/yvette-2.png'
 ]
 product2 = Product.new(name: 'Mamie blue', format: '60 x 80', product_price: 45, delivery_price: 5, description:"Sérigraphie mamie blue sur papier 180gr", stock_quantity: 10, material: papier, category: serigraphie, artist: alexis)
 product2.save!
