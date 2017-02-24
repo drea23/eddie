@@ -12,9 +12,9 @@ Domain.destroy_all
 Category.destroy_all
 Material.destroy_all
 
-user1 = User.create! :email => 'lila@gmail.com', :password => 'topsecret', :password_confirmation => 'topsecret'
-user2 = User.create! :email => 'andrea@gmail.com', :password => '123456', :password_confirmation => '123456'
-user3 = User.create! :email => 'alexis@gmail.com', :password => 'AZERTY', :password_confirmation => 'AZERTY'
+user1 = User.create! :email => 'lila@gmail.com', :password => '111111', :password_confirmation => '111111'
+user2 = User.create! :email => 'andrea@gmail.com', :password => '111111', :password_confirmation => '111111'
+user3 = User.create! :email => 'alexis@gmail.com', :password => '111111', :password_confirmation => '111111'
 
 domain1 = Domain.create!(name: "Illustrateur")
 domain2 = Domain.create!(name:"Photographe")
@@ -22,8 +22,10 @@ domain3 = Domain.create!(name:"Designer")
 domain4 = Domain.create!(name: "Serigraphe")
 
 lila = Artist.create!(username: "Lila", description: "Excentrique et éxhubérante, j'aime l'art contemporain dans sa forme la plus brute", street: "11 rue de la berthe", zipcode: "13013", city:"Marseille", country: "france", siret:"12345678901234", domain: domain3, user_id: user1.id )
+lila.photo_url = ''
 alexis = Artist.create!(username: "Alexis", description: "Je collectionne les brosses à cheveux en corne de cerf", street: "23 rue de la nouille", zipcode: "75006", city:"Paris", country: "france", siret:"12345678901243", domain: domain4, user_id: user3.id)
 andrea = Artist.create!(username: "Andrea", description: "blabla", street: "56 rue de la fortune", zipcode: "13013", city:"Marseille", country: "france", siret:"12345678901245", domain: domain2, user_id: user2.id)
+andrea.photo_url = ''
 
 serigraphie = Category.create!(name: "Serigraphie")
 photo = Category.create!(name: "Photographie")
@@ -46,6 +48,8 @@ url1 = [
 ]
 product1 = Product.new(name: 'Affiche chouette', format: '60 x 80', product_price: 30, delivery_price: 5, description:"Sérigraphie chouette et l'enfant sur papier 180gr", stock_quantity: 10, material: papier, category: serigraphie, artist: alexis)
 product1.save!
+product1.reviews = Review.new(title:"Superbe", content: "Article d'une très grande qualité artistique", rating: 4)
+product1.reviews = Review.new(title:"Magnifique", content: "Alexis est très doué, ses sérigraphies sont magnifiques", rating: 4)
 product1.photo_urls = url1
 url2 = [
   'https://galerie.alittlemarket.com/galerie/product/853733/dessins-papi-yvette-illustration-serigra-8174933-papi-mami-4-ill400a-f247b_570x0.jpg',
@@ -72,9 +76,9 @@ product5 = Product.new(name: "Cloud lamp", format: '70cm', product_price: 95, de
 product5.save!
 product5.photo_urls = url5
 url6 = [
-  'https://unsplash.com/search/lamp?photo=3-YINH6YvCw',
+  'http://www.everydaykiss.com/wp-content/uploads/2012/06/38.jpg',
 ]
-product6 = Product.new(name: "Old lamp", format: '50cm', product_price: 150, delivery_price: 10, description:"Lampe design", stock_quantity: 10, material: acier, category: art_deco, artist: lila)
+product6 = Product.new(name: "Sexy lamp", format: '50cm', product_price: 150, delivery_price: 10, description:"Sexy Lamp", stock_quantity: 10, material: acier, category: art_deco, artist: lila)
 product6.save!
 product6.photo_urls = url6
 url7 = [
